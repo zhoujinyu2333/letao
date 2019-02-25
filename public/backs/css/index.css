@@ -17,8 +17,19 @@ ul {
     list-style: none;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
 .mt {
     margin-top: 150px;
+}
+
+.red {
+    color: red;
 }
 
 .panel-title {
@@ -26,4 +37,121 @@ ul {
     line-height: 40px;
     text-align: center;
     font-size: 20px;
+}
+
+.lt_left {
+    width: 180px;
+    height: 100%;
+    background-color: #222D32;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    transition: all 1s;
+}
+
+.lt_left.hides {
+    left: -180px;
+}
+
+.lt_left .title {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    background-color: #367FA9;
+    font-size: 24px;
+    text-align: center;
+}
+
+.lt_left .title a {
+    color: #fff;
+}
+
+.lt_left .user {
+    height: 180px;
+    padding-top: 30px;
+}
+
+.lt_left .user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.lt_left .user p {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+}
+
+.lt_left .nav a {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    border-left: 3px solid transparent;
+    color: #fff;
+    display: block;
+}
+
+.lt_left .nav a.current {
+    background-color: #1D1F21;
+    border-left: 3px solid #006699;
+}
+
+.lt_left .nav i {
+    margin-right: 5px
+}
+
+.lt_left .son {
+    display: none;
+}
+
+.lt_left .son a {
+    padding-left: 60px;
+}
+
+.lt_main {
+    height: 1000px;
+    width: 100%;
+    padding-left: 180px;
+    padding-top: 50px;
+    transition: all 1s;
+}
+
+.lt_main.hides {
+    padding-left: 0;
+}
+
+.lt_main .lt_header {
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #3C8DBC;
+    padding-left: 180px;
+    transition: all 1s;
+}
+
+.lt_header.hides {
+    padding-left: 0;
+}
+
+.lt_main .lt_header a {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+}
+
+.lt_footer {
+    margin-top: 20px;
+    padding-left: 15px;
 }
