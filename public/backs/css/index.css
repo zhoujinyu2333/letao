@@ -155,3 +155,15 @@ a:active {
     margin-top: 20px;
     padding-left: 15px;
 }
+
+.lt_main .e_left,
+.lt_main .e_right {
+    width: 48%;
+    height: 400px;
+}
+
+.table.table-bordered th,
+.table.table-bordered td {
+    text-align: center;
+    vertical-align: middle;
+}
