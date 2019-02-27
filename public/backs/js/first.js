@@ -64,14 +64,11 @@ $(function () {
             dataType: "json",
             success: function (res) {
                 console.log(res);
-
                 if (res.success) {
                     $("#f_modal").modal("hide");
                     currentPage = 1;
                     render();
-
                     $("#form").data("bootstrapValidator").resetForm(true);
-
                 }
             }
         })
