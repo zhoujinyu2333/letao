@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    // 需求: 地址栏  xxx.html?key=匡威&name=pp&age=18  
+    //      解析地址栏参数, 将参数解析成一个对象
+    //      例如: { key: '匡威', name: 'pp', age: 18 }
+
+    function getSearch( k ) {
+      // 获取地址栏参数
+      var str = location.search;  // 如果有中文, 是需要解码的
+
+      // 进行中文解码
+      str = decodeURI(str);  // ?key=匡威&name=pp&age=18
+
+      // str.slice(start, end);  // 包括start, 不包括end
+      // str.slice(start);  // 表示从 start 开始截取到最后
+
+      str = str.slice(1);    // key=匡威&name=pp&age=18
+
+      var arr = str.split('&');   // ["key=匡威", "name=pp", "age=18"]
+
+      var obj = {};
+      arr.forEach(function (v, i) {  // v => age=18
+        var key = v.split('=')[0];  // age
+        var value = v.split('=')[1]; // 18
+        // 将属性添加到 obj 中
+        obj[key] = value;
+      })
+      return obj[k];
+    }
+
+    var age = getSearch('age');
+    console.log(age);
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
